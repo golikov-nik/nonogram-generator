@@ -7,6 +7,7 @@ Installation:
 Run command `pip install -r requirements.txt` in order to install all prerequired packages.  
 
 # Usage
+To run this, you need to have `nonogram.py` runnable and `template.tex` in the same folder.  
 Use the following syntax: `python nonogram.py <Input file> [<Input parameters>]`  
 Input file is a picture in .pbm format  <http://netpbm.sourceforge.net/doc/pbm.html>  
 To view help use parameter `-h` or `--help`.  
