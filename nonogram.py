@@ -71,8 +71,8 @@ def main():
     img = np.loadtxt(args.i, skiprows=OPTIONAL_ROWS)
     cnt_y = [find_unbroken_lines(line) for line in img]
     cnt_x = [find_unbroken_lines(line) for line in img.T]
-    max_x = max(max((len(lst) for lst in cnt_x)), args.s)
-    max_y = max(max((len(lst) for lst in cnt_y)), args.s)
+    max_x = max(len(lst) for lst in cnt_x)
+    max_y = max(len(lst) for lst in cnt_y)
     m = make_matrix(cnt_x, cnt_y, max_x, max_y, *img.shape)
     print_tex(m, max_x, max_y, args.s, args.o, args.pdf)
 
