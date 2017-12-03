@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{tabu}
+\usepackage{array}
+\usepackage{calc}
+\usepackage[a4paper]{geometry} 
+\geometry{a4paper,tmargin=3.5cm, lmargin=.5cm, rmargin=.5cm} 
+
+\newcolumntype{K}[1]{>{\rule[0.5\ht\strutbox-#1/2]{0pt}{ #1}\centering}m{ #1-2\tabcolsep}}
+
+\begin{document}
+\begin{center}
+\begin{tabu}{ {{preamble}} }
+	\tabucline[3pt]{1 - {{width}} }
+	{% for row in rows %}
+		{{ row }}
+	{% endfor %}
+\end{tabu}
+\end{center}
+\end{document}
