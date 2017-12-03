@@ -65,8 +65,7 @@ def main():
     parser.add_argument('-o', type=str, nargs='?',
                         help="output prefix", default="out")
     parser.add_argument('-s', type=int, nargs='?', help='square side', default=5)
-    parser.add_argument('-pdf', help="make pdf using pdflatex tool", dest='pdf', action='store_true')
-    parser.set_defaults(pdf=False)
+    parser.add_argument('-pdf', help="make pdf using pdflatex tool", dest='pdf', action='store_true', default=False)
     args = parser.parse_args()
     img = np.loadtxt(args.i, skiprows=OPTIONAL_ROWS)
     cnt_y = [find_unbroken_lines(line) for line in img]
