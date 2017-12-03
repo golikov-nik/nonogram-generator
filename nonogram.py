@@ -53,9 +53,9 @@ def print_tex(m, max_x, max_y, square_side, out_pref, pdf):
 def make_matrix(cnt_x, cnt_y, max_x, max_y, h, w):
     m = np.empty([h + max_x, w + max_y], dtype=object)
     for i, arr in enumerate(cnt_y):
-        m[max_x + i][max_y - len(arr):max_y] = np.array(arr)
+        m[max_x + i][max_y - len(arr):max_y] = arr
     for i, arr in enumerate(cnt_x):
-        m.T[max_y + i][max_x - len(arr):max_x] = np.array(arr)
+        m.T[max_y + i][max_x - len(arr):max_x] = arr
     return m
 
 
